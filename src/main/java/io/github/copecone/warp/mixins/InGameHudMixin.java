@@ -19,18 +19,6 @@ public class InGameHudMixin {
     @Inject(method = "render", at = @At("RETURN"), cancellable = true)
     private void render(DrawContext context, float tickDelta, CallbackInfo ci) {
         if (Main.mc.player != null && Main.mc.world != null && !Main.mc.options.debugEnabled) {
-            // Info
-            float yaw = Main.mc.player.getYaw() % 360;
-            float pitch = Main.mc.player.getPitch();
-            String facing = Main.mc.player.getHorizontalFacing().name().substring(0, 1).toUpperCase()
-                    + Main.mc.player.getHorizontalFacing().name().substring(1).toLowerCase();
-            String axis = switch (facing) {
-                case "North" -> "-Z";
-                case "South" -> "+Z";
-                case "East" -> "+X";
-                case "West" -> "-X";
-                default -> "?";
-            };
             String biome = Main.mc.world.getRegistryManager().get(RegistryKeys.BIOME)
                     .getId(Main.mc.world.getBiome(Main.mc.player.getBlockPos()).value()).getPath().replace("_", " ");
             String cap_biome = biome.substring(0, 1).toUpperCase() + biome.substring(1).toLowerCase();
@@ -40,8 +28,7 @@ public class InGameHudMixin {
             String song = Main.mc.getMusicType().getSound().getKey().toString().substring(45).replace("]", "");
             PlayerListEntry playerEntry = Main.mc.player.networkHandler.getPlayerListEntry(Main.mc.player.getGameProfile().getId());
             int latency = playerEntry == null ? 0 : playerEntry.getLatency();
-            String player_info = String.format("X: %.2f / Y: %.2f / Z: %.2f / Yaw: %.2f / Pitch: %.2f / Facing: %s (%s)",
-                    Main.mc.player.getX(), Main.mc.player.getY(), Main.mc.player.getZ(), yaw, pitch, facing, axis);
+            String player_info = String.format("{%.2f, %.2f, %.2f}", Main.mc.player.getX(), Main.mc.player.getY(), Main.mc.player.getZ());
 
             String world_info = String.format("Biome: %s / Weather: %s", cap_biome, weather);
             String client_info = String.format("Warp 0.0.2 Dev");
