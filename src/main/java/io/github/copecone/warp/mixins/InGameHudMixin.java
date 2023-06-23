@@ -55,8 +55,8 @@ public class InGameHudMixin {
 
             // Draw the text
             context.drawTextWithShadow(Main.mc.textRenderer, warpAnnotation, 1, 1, Formatting.LIGHT_PURPLE.getColorValue());
-            context.drawTextWithShadow(Main.mc.textRenderer, client_ant, 1, 1, Formatting.WHITE.getColorValue());
-            context.drawTextWithShadow(Main.mc.textRenderer, client_info, 1, 1, Formatting.DARK_GRAY.getColorValue());
+            context.drawTextWithShadow(Main.mc.textRenderer, client_ant, 2, 1, Formatting.WHITE.getColorValue());
+            context.drawTextWithShadow(Main.mc.textRenderer, client_info, 6, 1, Formatting.DARK_GRAY.getColorValue());
             context.drawTextWithShadow(Main.mc.textRenderer, player_info, 1, 11, Formatting.WHITE.getColorValue());
             context.drawTextWithShadow(Main.mc.textRenderer, player_info, 1, 11, Formatting.WHITE.getColorValue());
             context.drawTextWithShadow(Main.mc.textRenderer, game_info, 1, 21, Formatting.WHITE.getColorValue());
