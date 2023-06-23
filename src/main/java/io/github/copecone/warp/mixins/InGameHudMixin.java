@@ -44,6 +44,9 @@ public class InGameHudMixin {
                     Main.mc.player.getX(), Main.mc.player.getY(), Main.mc.player.getZ(), yaw, pitch, facing, axis);
 
             String world_info = String.format("Biome: %s / Weather: %s", cap_biome, weather);
+            String warpAnnotation = String.format("W");
+            String client_ant = String.format("arp");
+            String client_info = String.format("0.0.2");
             String game_info = String.format("FPS: %s / TPS: %.2f / Ping: %s", fps, TPSListener.INSTANCE.ticks,
                     Main.mc.getCurrentServerEntry() == null ? "0" : latency);
             String latest_packets = String.format("Packet sent: %s / Packet received: %s",
@@ -51,9 +54,14 @@ public class InGameHudMixin {
             PacketListener.INSTANCE.getLastSentPacket());
 
             // Draw the text
-            context.drawTextWithShadow(Main.mc.textRenderer, player_info, 1, 1, Formatting.WHITE.getColorValue());
-            context.drawTextWithShadow(Main.mc.textRenderer, game_info, 1, 11, Formatting.WHITE.getColorValue());
-            context.drawTextWithShadow(Main.mc.textRenderer, world_info, 1, 21, Formatting.WHITE.getColorValue());
+            context.drawTextWithShadow(Main.mc.textRenderer, warpAnnotation, 1, 1, Formatting.LIGHT_PURPLE.getColorValue());
+            context.drawTextWithShadow(Main.mc.textRenderer, client_ant, 1, 1, Formatting.WHITE.getColorValue());
+            context.drawTextWithShadow(Main.mc.textRenderer, client_info, 1, 1, Formatting.DARK_GRAY.getColorValue());
+            context.drawTextWithShadow(Main.mc.textRenderer, player_info, 1, 11, Formatting.WHITE.getColorValue());
+            context.drawTextWithShadow(Main.mc.textRenderer, player_info, 1, 11, Formatting.WHITE.getColorValue());
+            context.drawTextWithShadow(Main.mc.textRenderer, game_info, 1, 21, Formatting.WHITE.getColorValue());
+            context.drawTextWithShadow(Main.mc.textRenderer, world_info, 1, 31, Formatting.WHITE.getColorValue());
+
 
             // Advanced
             //if (Main.advancedDebug)
