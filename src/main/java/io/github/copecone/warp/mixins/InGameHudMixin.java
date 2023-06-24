@@ -31,7 +31,7 @@ public class InGameHudMixin {
             String player_info = String.format("{%.2f, %.2f, %.2f}", Main.mc.player.getX(), Main.mc.player.getY(), Main.mc.player.getZ());
 
             String world_info = String.format("Biome: %s / Weather: %s", cap_biome, weather);
-            String client_info = String.format("Warp 0.0.2 Dev");
+            String client_info = String.format("Warp %s", Main.ver);
             String game_info = String.format("FPS: %s / TPS: %.2f / Ping: %s", fps, TPSListener.INSTANCE.ticks,
                     Main.mc.getCurrentServerEntry() == null ? "0" : latency);
             String latest_packets = String.format("Packet sent: %s / Packet received: %s",

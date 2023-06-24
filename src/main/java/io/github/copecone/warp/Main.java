@@ -11,6 +11,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class Main implements ClientModInitializer {
+    public static final String ver = "0.02";
     public static final MinecraftClient mc = MinecraftClient.getInstance();
     public static final Logger LOGGER = LoggerFactory.getLogger("Warp");
     public static final EventBus EVENT_BUS = new EventBus();
