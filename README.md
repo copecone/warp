@@ -1,6 +1,8 @@
 # Warp Client
 ## WARNING! You are seeing the dev version.
 
+## Wa! 1.20 Released!!
+
 **Why I should use this Client?**
 > https://coming.soon
 
