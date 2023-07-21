@@ -1,6 +1,6 @@
 # Warp Client
 ## Wa! 1.20 Released!!
-
+[![Fabric CI](https://github.com/copecone/warp/actions/workflows/github-action.yml/badge.svg)](https://github.com/copecone/warp/actions/workflows/github-action.yml)
 **Why I should use this Client?**
 > https://coming.soon
 
