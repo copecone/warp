@@ -21,7 +21,7 @@ public class EventBus implements IEventBus {
                 .forEach(method -> {
                     if (!method.canAccess(registerClass)) method.setAccessible(true);
 
-                    @SupressWarnings("unchecked") Class<? extends WarpEvent> event =
+                    @SuppressWarnings("unchecked") Class<? extends WarpEvent> event =
                             (Class<? extends WarpEvent>) method.getParameterTypes()[0];
 
                     Consumer<WarpEvent> lambda = null;
