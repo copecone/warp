@@ -1,4 +1,4 @@
-# [Currently Supressed] Warp Client
+# Warp Client
 ## Wa! 1.20 Released!!
 
 **Why I should use this Client?**
