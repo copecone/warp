@@ -19,7 +19,7 @@
     "main": [
       {
         "adapter": "kotlin",
-        "value": "io.github.forceload.${mod_id}.Warp"
+        "value": "io.github.copecone.${mod_id}.Warp"
       }
     ]
   },
