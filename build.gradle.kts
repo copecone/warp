@@ -1,9 +1,6 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-
 plugins {
     id("fabric-loom").version(Dependency.Loom.Version)
     kotlin("jvm").version(Dependency.Kotlin.Version)
-    id("com.github.johnrengelman.shadow") version "7.1.2"
 }
 
 base { archivesName.set(project.extra["archives_base_name"] as String) }
@@ -16,30 +13,24 @@ val fabricLanguageKotlin =
 val yarnBuild =
     Dependency.Minecraft.Version + "+build.${Dependency.Yarn.Build}"
 
-repositories {
-    maven {
-        url = uri("https://maven.terraformersmc.com")
-        name = "Terraformers MC"
-    }
-
-    maven {
-        url = uri("https://jitpack.io")
-        name = "JitPack"
-    }
-
-    maven("https://raw.githubusercontent.com/kotlin-graphics/mary/master")
-}
-
 dependencies {
-
     minecraft("com.mojang", "minecraft", Dependency.Minecraft.Version)
     mappings("net.fabricmc", "yarn", yarnBuild, null, "v2")
     modImplementation("net.fabricmc", "fabric-loader", project.extra["loader_version"] as String)
     modImplementation("net.fabricmc.fabric-api", "fabric-api", project.extra["fabric_version"] as String)
     modImplementation("net.fabricmc", "fabric-language-kotlin", fabricLanguageKotlin)
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.0-Beta")
-    modImplementation("com.github.forceload:uilib:2a95cb42e3")
 
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.0-Beta")
+    modImplementation("com.github.forceload:uilib:fbcf2e508a")
+}
+
+repositories {
+    maven {
+        url = uri("https://jitpack.io")
+        name = "JitPack"
+    }
+
+    mavenCentral()
 }
 
 tasks {

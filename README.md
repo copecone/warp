@@ -1,20 +1,12 @@
-# Warp Client
-## WARNING! You are seeing the dev version.
+# FabricMC Mod Template
+- Simple FabricMC Mod Template Using Gradle Kotlin DSL
 
-## Wa! 1.20 Released!!
+---
 
-**Why I should use this Client?**
-> https://coming.soon
+# Getting Started
+* Modify Mod ID on gradle.properties
+* Refactor package name
 
-``Made in Korea, 안심하셔도 됩니다 :)``
-
-# Features
-> https://coming.soon
-
-**Currently in Alpha**
-
-# License of Using our Client
-This project is subject to the **[MIT License]** (In License).
-
-## Thanks For
-[Forceload Team](https://github.com/forceload) for [UILib](https://github.com/forceload/UILib)
+---
+# Libraries
+- This template includes [UILib by Project Forceload](https://github.com/forceload/UILib)

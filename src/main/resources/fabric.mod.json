@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "id": "${mod_id}",
   "version": "${version}",
-  "name": "Warp Client",
-  "description": "Optimization Client Mod For Fabric",
+  "name": "Warp",
+  "description": "Optimization & QOL Mod for Fabric",
   "authors": [
     "copecone", "noMoment"
   ],
@@ -12,12 +12,15 @@
     "issues": "https://github.com/copecone/warp/issues",
     "sources": "https://github.com/copecone/warp"
   },
-  "license": "MIT ",
-  "icon": "assets/${mod_id}/icon.png",
+  "license": "MIT License",
+  "icon": "assets/${mod_id}/textures/icon.png",
   "environment": "*",
   "entrypoints": {
-    "client": [
-      "io.github.copecone.warp.Main"
+    "main": [
+      {
+        "adapter": "kotlin",
+        "value": "io.github.forceload.${mod_id}.Warp"
+      }
     ]
   },
 
